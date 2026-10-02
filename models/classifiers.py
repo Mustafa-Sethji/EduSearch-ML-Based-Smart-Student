@@ -113,7 +113,7 @@ def train_classifiers(tfidf_matrix, chunks: list[dict]):
         }
 
         # Random Forest
-        rf = RandomForestClassifier(n_estimators=50, random_state=42, n_jobs=-1)
+        rf = RandomForestClassifier(n_estimators=30, max_depth=10, max_features="sqrt", random_state=42, n_jobs=-1)
         rf.fit(X_tr, yd_tr)
         rf_pred = rf.predict(X_te)
         results["Random Forest"] = {
@@ -124,7 +124,7 @@ def train_classifiers(tfidf_matrix, chunks: list[dict]):
 
         # XGBoost
         if HAS_XGB:
-            xgb = XGBClassifier(n_estimators=50, random_state=42,
+            xgb = XGBClassifier(n_estimators=30, max_depth=6, random_state=42,
                                  verbosity=0, use_label_encoder=False,
                                  eval_metric="mlogloss")
             xgb.fit(X_tr.toarray(), yd_tr)
