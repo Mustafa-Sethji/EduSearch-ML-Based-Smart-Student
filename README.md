@@ -1,4 +1,4 @@
-# 🎓 EduSearch AI — Smart Student Assistant
+# 🎓 EduSearch-ML Based Smart Student
 
 <p align="center">
   <b>An AI-powered educational search and learning platform built with React, Node.js, MySQL, and Python ML.</b>
@@ -12,7 +12,7 @@
 
 ## 📌 Overview
 
-**EduSearch AI** is a full-stack Smart Student Assistant designed to help students search and explore educational content from their textbooks.
+**EduSearch** is a full-stack Smart Student Assistant designed to help students search and explore educational content from their textbooks.
 
 Users can upload PDF textbooks, search for questions using normal text or an image, discover similar content, view analytics, bookmark useful resources, and receive study recommendations.
 
